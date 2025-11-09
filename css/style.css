@@ -127,7 +127,7 @@ a {
     filter: brightness(0.6);
 }
 
-.hero-content {
+.hero-content { 
     max-width: 800px;
     padding: 2rem;
 }
@@ -141,6 +141,13 @@ a {
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -159,6 +166,17 @@ a {
 .btn:hover {
     background-color: #d89000;
     transform: translateY(-3px);
+}
+
+.btn.btn-outline {
+    background: transparent;
+    color: var(--light-color);
+    border: 2px solid var(--light-color);
+}
+
+.btn.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--light-color);
 }
 
 .page-section {
@@ -324,6 +342,166 @@ a {
     padding: 2rem;
 }
 
+/* ========== PAGES PROGRAMMES ========== */
+.subpage-hero {
+    background: linear-gradient(rgba(13, 76, 146, 0.75), rgba(13, 76, 146, 0.75)), url('../assets/images/bannieres/banniere-accueil.png') center/cover no-repeat;
+    color: var(--light-color);
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.subpage-hero h1 {
+    color: var(--light-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subpage-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.breadcrumbs {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.breadcrumbs a {
+    color: var(--light-color);
+    opacity: 0.85;
+}
+
+.programme-section {
+    background: var(--light-color);
+}
+
+.programme-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.programme-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--light-color);
+}
+
+.programme-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.programme-card-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.programme-card-content ul {
+    list-style-type: '• ';
+    padding-left: 1.5rem;
+}
+
+.programme-card-content li {
+    margin-bottom: 0.5rem;
+}
+
+.programme-card-footer {
+    padding: 0 2rem 2rem;
+}
+
+.programme-card-footer .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.itinerary-section {
+    padding: 4rem 0;
+}
+
+.itinerary-intro {
+    max-width: 750px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.itinerary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.itinerary-table thead {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+.itinerary-table th,
+.itinerary-table td {
+    padding: 1.2rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.itinerary-table tbody tr:nth-child(even) {
+    background: var(--background-color);
+}
+
+.practical-infos {
+    background: var(--background-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.practical-infos h3 {
+    margin-bottom: 1rem;
+}
+
+.practical-infos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.practical-infos li {
+    margin-bottom: 0.5rem;
+}
+
+.cta-band {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+    border-radius: 20px;
+}
+
+.cta-band h2 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+.cta-band p {
+    margin-bottom: 2rem;
+}
+
+.cta-band .btn {
+    background: var(--light-color);
+    color: var(--primary-color);
+}
+
+.cta-band .btn:hover {
+    background: rgba(255,255,255,0.9);
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 900px) {
     .difference-grid, .testimonials-grid {
@@ -333,10 +511,10 @@ a {
 
 @media (max-width: 768px) {
     .main-nav ul { display: none; }
-    
+
     .hero-content h1 { font-size: 2.5rem; }
 
-    .inspiration-item, .inspiration-item:nth-child(even) { 
+    .inspiration-item, .inspiration-item:nth-child(even) {
         grid-template-columns: 1fr;
         text-align: center;
      }
@@ -344,4 +522,9 @@ a {
     .inspiration-item ul { text-align: left; display: inline-block; }
 
     .about-us { grid-template-columns: 1fr; text-align: center; }
+    .programme-grid { grid-template-columns: 1fr; }
+    .subpage-hero { padding: 5rem 0 3rem; }
+    .subpage-hero h1 { font-size: 2.2rem; }
+    .itinerary-table th, .itinerary-table td { padding: 1rem; }
+    .hero-actions { flex-direction: column; }
 }
