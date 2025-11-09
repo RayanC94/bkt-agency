@@ -420,6 +420,70 @@ a {
     text-align: center;
 }
 
+.faq-page {
+    padding-top: 4rem;
+}
+
+.faq-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.faq-category {
+    margin-bottom: 3rem;
+}
+
+.faq-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.faq-list details {
+    background: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    margin-bottom: 1rem;
+    padding: 1.2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-list details[open] {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(13, 76, 146, 0.15);
+}
+
+.faq-list summary {
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-list details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-list p {
+    margin-top: 1rem;
+    color: var(--dark-color);
+}
+
 .itinerary-section {
     padding: 4rem 0;
 }
@@ -527,4 +591,6 @@ a {
     .subpage-hero h1 { font-size: 2.2rem; }
     .itinerary-table th, .itinerary-table td { padding: 1rem; }
     .hero-actions { flex-direction: column; }
+    .faq-list summary { flex-direction: column; align-items: flex-start; }
+    .faq-list summary::after { align-self: flex-end; }
 }
